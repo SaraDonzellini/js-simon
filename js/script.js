@@ -1,19 +1,24 @@
-const button = document.getElementById('button')
-let conteggio = 0
+const button = document.getElementById('button');
+let conteggio = 0;
 let gameOver = false;
 
 button.addEventListener("click", function () {
-  button.innerHTML = `play ${conteggio}`
+  
   
   if(!gameOver) {
-    if (conteggio <= 10){
-      conteggio++
-      console.log(conteggio)
+    if (conteggio < 10){
+      conteggio++;
+      button.innerHTML = `Play ${conteggio}`;
     } else {
+      gameOver=true;
+
       setTimeout(() => {
-        gameOver=true
-      }, 10000);
+        gameOver=false;
+        conteggio = 0;
+        button.innerHTML = `Play ${conteggio}`;
+      }, 4000);
 
   }
   }
 })
+
