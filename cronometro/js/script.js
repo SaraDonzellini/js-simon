@@ -7,19 +7,19 @@ let conteggio = 0;
 
 start.addEventListener('click', function () {
   const clock = setInterval(() => {
-    conteggio++
-    console.log(conteggio)
-    tempo.innerHTML = conteggio
+    conteggio++;
+    console.log(conteggio);
+    tempo.innerHTML = conteggio;
   }, 100);
 
   pause.addEventListener('click', function () {
-    clearInterval(clock)
-    tempo.innerHTML = conteggio
-  })
+    clearInterval(clock);
+    tempo.innerHTML = conteggio;
+  });
   reset.addEventListener('click', function () {
-    conteggio = 0
-    tempo.innerHTML = conteggio
-  })
+    conteggio = 0;
+    tempo.innerHTML = conteggio;
+  });
   
   
-})
+});
